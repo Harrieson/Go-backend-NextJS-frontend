@@ -8,7 +8,7 @@ import (
 
 func main() {
 	handler := http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) {
-		resp := []byte(`{"status": "ok"}`)
+		resp := []byte(`{"status": "OK"}`)
 		rw.Header().Set("Content-Type", "application/json")
 		rw.Header().Set("Content-Length", fmt.Sprint(len(resp)))
 		rw.Write(resp)
